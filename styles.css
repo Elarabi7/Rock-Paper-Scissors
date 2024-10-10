@@ -43,11 +43,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 150px;
+    height: auto;
     border: 3px solid var(--outline);
     border-radius: 25px;
-    padding: 1rem 1.4rem 1rem 2rem;
-    /* Combined padding for top, bottom, left, right */
+    padding: 1rem 1.4rem;
     background-color: transparent;
 }
 
@@ -55,12 +54,12 @@ body {
 .choices {
     display: flex;
     flex-direction: column;
-    align-items: left;
+    align-items: flex-start;
     flex-grow: 1;
     margin: 0%;
     margin-left: 0%;
     color: white;
-    font-size: 35px;
+    font-size: 2.3rem;
     line-height: 120%;
 }
 
@@ -389,4 +388,79 @@ h2 {
 
 .hidden {
     display: none;
+}
+
+@media (max-width: 600px) {
+    .game {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        height: 60vh;
+    }
+
+    .choices {
+        font-size: 1.5rem;
+        /* Adjust for smaller screens */
+    }
+
+    .score-value {
+        font-size: 3rem;
+        /* Adjust for smaller screens */
+    }
+
+    .results_heading {
+        font-size: 1.2rem;
+        /* Adjust for smaller screens */
+    }
+
+    .play_again {
+        padding: 0.5rem 2rem;
+        /* Adjust padding */
+        font-size: 1rem;
+        /* Adjust for smaller screens */
+    }
+
+    .rules-btn {
+        padding: 0.5rem 1.5rem;
+        /* Adjust padding */
+        font-size: 1rem;
+        /* Adjust for smaller screens */
+    }
+
+    .modal_title {
+        font-size: 2rem;
+        /* Adjust title for smaller screens */
+    }
+
+    .rules {
+        font-size: 1.2rem;
+        /* Adjust rules font size for smaller screens */
+    }
+
+    .rules img {
+        width: 80%;
+        /* Adjust image size for smaller screens */
+    }
+
+    .choice-btn {
+        scale: 0.7;
+    }
+
+    .game::before {
+        left: 15%;
+        top: 16%;
+
+    }
+
+    .results_result {
+        scale: 0.6;
+    }
+
+    .results_text {
+        font-size: 2rem;
+        padding-bottom: 1.5rem;
+        margin-left: 1px;
+        margin-right: 1px;
+
+    }
+
 }
